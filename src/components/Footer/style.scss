@@ -1,0 +1,27 @@
+.main-footer { 
+    background-color: #707070;
+    height: 97px;
+    padding: 20px;
+    box-sizing: border-box;
+    .content {
+        display: flex;
+        justify-content: space-between;
+        font-family: InterstateLight;
+        font-size: 14px;
+        > div {
+            color: #FFF;
+            &:nth-child(2) {
+                display: flex;
+                font-size: 14px;
+                line-height: 25px;
+                ul {
+                    margin-left: 5px;
+                    display: flex;
+                    li {
+                        margin: 0 6px
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+@import '../../Mixins.scss';
+
+.header-container {
+    @include pc-to-tablet {
+        &.active {
+            &::before {
+                content: '';
+                position: fixed;
+                z-index: 7;
+                height: 100vh;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.308);
+            }
+            .collapse-menu {
+                top: 0;
+            }
+        }
+    }
+}
+
+.main-header {
+    position: relative;
+    height: 160px;
+    border-bottom: 22px solid #001254;
+    background-color: white;
+    @include pc-to-tablet {
+        height: 96px;
+        display: flex;
+        background-color: #eaecee;
+        border-bottom: none;
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+    }
+    > .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .title {
+        display: flex;
+        position: relative;
+        height: 71px;
+        padding: 24px 0 0 200px;
+        @include pc-to-tablet {
+            padding: 0;
+            > div {
+                display: none;
+            }
+        }
+        .logo {
+            @include pc-up {
+                position: absolute;
+                top: 62%;
+                left: 0;
+                transform: translateY(-50%);
+                padding: 0 22px 9px 22px;
+                &.mobile {
+                    display: none;
+                }
+                &.main {
+                    background-color: white;
+                    display: block;
+                }
+            }
+            @include pc-to-tablet {
+                &.mobile {
+                    background-color: none;
+                    display: block;
+                }
+                &.main {
+                    display: none;
+                }
+            }
+        }
+        > div {
+            font-family: Interstate;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            padding-right: 56px;
+            border-right: 2px solid #cccccc;
+            @include pc-to-tablet {
+                display: none;
+            }
+            span:first-child {
+                font-size: 20.39px;
+                color: #009bfa;
+                margin-bottom: 5px;
+            }
+            span:last-child {
+                font-size: 53.95px;
+                color: #193989;
+            }
+        }
+    }
+    .main-nav {
+        position: relative;
+        width: 100%;
+        @include pc-to-tablet {
+            position: absolute;
+            width: auto;
+            top: 55%;
+            transform: translateY(-50%);
+            right: 20px;
+        }
+        .web {
+            display: none;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+            padding-left: 46px;
+            ul {
+                font-size: clamp(17px, 19.47px, 19.47px);
+                display: flex;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 50px;
+                    }
+                    &:not(:first-child) {
+                        margin-left: 50px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+            @include pc-up {
+                display: flex;
+            }
+        }
+        .mobile {
+            display: none;
+            @include pc-to-tablet {
+                display: block;
+            }
+            button {
+                border: none;
+                width: auto;
+            }
+        }
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    padding-bottom: 26px;
+    @include pc-to-tablet {
+        padding-bottom: 12px;
+        justify-content: center;
+    }
+}
+
+.collapse-menu {
+    top: -800px;
+    position: fixed;
+    width: 100%;
+    background-color: #FFF;
+    z-index: 7;
+    transition: 0.2s;
+    padding: 60px;
+    padding-top: 110px;
+    text-align: center;
+    box-sizing: border-box;
+    h1 {
+        font-size: 24px;
+        font-family: InterstateLight;
+        padding: 14px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #bfbfbf;
+    }
+    ul {
+        li {
+            height: 77px;
+            font-size: 24px;
+            padding: 30px;
+            box-sizing: border-box;
+            background-color: #ebebeb;
+            margin-top: 15px;
+            > a {
+                text-decoration: none;
+                color: #707070;
+            }
+        }
+    }
+}

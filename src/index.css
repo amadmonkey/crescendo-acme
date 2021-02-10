@@ -1,13 +1,50 @@
+@font-face {
+    font-family: "Helvetica";
+    src: local("Helvetica"), url(./fonts/helvetica.woff) format('woff');
+}
+
+@font-face {
+    font-family: "HelveticaLight";
+    src: url(./fonts//helvetica-light-2.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Interstate";
+    src: local("Interstate"), url(./fonts/interstate-regular.woff) format('woff')
+}
+
+@font-face {
+    font-family: "InterstateLight";
+    src: local("Interstate"), url(./fonts/Interstate\ Light\ Regular.otf) format('opentype')
+}
+
+@font-face {
+    font-family: "InterstateBold";
+    src: local("Interstate"), url(./fonts/interstate-bold.woff) format('woff')
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Helvetica;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e6e6e6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+    width: 100%;
+    max-width: 184px;
+    border: 1px solid #FFF;
+    border-radius: 0;
+    height: 50px;
+    background: none;
+    font-weight: bold;
+    font-size: 17.97px;
+    color: #FFF;
+    text-shadow: 0 0 3px rgb(29, 29, 29);
 }

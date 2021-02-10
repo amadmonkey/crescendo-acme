@@ -1,0 +1,46 @@
+.insights {
+    > h1 {
+        font-size: 34px;
+    }
+    > p {
+        font-size: 15px;
+    }
+    .insight-item {
+        background-color: #FFF;
+        padding: 24px;
+        box-sizing: border-box;
+        border-bottom: 12px solid;
+        width: 100%;
+        max-width: 416px;
+        box-shadow: 0 0 10px #a7a7a7;
+        > div {
+            margin: 11px 0;
+            position: relative;
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                height: 0;
+                max-width: 0;
+                border: 49px solid #FFF;
+            }
+            &::before {
+                top: 0;
+                left: 0;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+            }
+            &::after {
+                right: 0;
+                bottom: 0;
+                border-left-color: transparent;
+                border-top-color: transparent;
+            }
+        }
+        h1 {
+            display: inline-block;
+            font-size: 34px;
+            font-weight: bold;
+            margin-top: 13px;
+        }
+    }
+}

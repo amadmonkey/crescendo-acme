@@ -1,0 +1,47 @@
+
+.hero {
+    position: relative;
+    height: 527px;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -168px;
+        height: 695px;
+        width: 100%;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-image: url(../../img/gradient.png);
+    }
+    .banner {
+        position: absolute;
+        top: -182px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    > .content {
+        div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFF;
+            z-index: 2;
+            max-width: 600px;
+            h1 {
+                font-weight: bold;
+                font-size: 50px;
+                letter-spacing: 3px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-family: HelveticaLight;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 45px;
+                padding-left: 2px;
+            }
+        }
+    }
+}

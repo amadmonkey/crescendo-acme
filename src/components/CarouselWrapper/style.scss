@@ -1,0 +1,55 @@
+@import '../../Mixins.scss';
+
+.carousel-container {
+    > .content {
+        > h1 {
+            font-size: 34px;
+            margin-bottom: 7px;
+        }
+        > p {
+            font-size: 15px;
+        }
+        padding-top: 46px;
+        padding-bottom: 46px;
+        > nav {
+            display: none;
+            justify-content: center;
+            margin-top: 30px;
+            text-align: center;
+            @include pc-to-tablet {
+                display: flex;
+            }
+            button {
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                border-color: #b7b7b7;
+                margin: 0 5px;
+                &.active {
+                    background-color: #b7b7b7;
+                }
+            }
+        }
+    }
+    .carousel {
+        position: relative;
+        margin-top: 20px;
+        .rotator {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            transition: 0.3s;
+            > * {
+                transition: 0.3s;
+            }
+            @include pc-to-tablet {
+                > * {
+                    &:not(.active) {
+                        transform: scale(0.8);
+                        transform-origin: top;
+                    }
+                }
+            }
+        }
+    }
+}

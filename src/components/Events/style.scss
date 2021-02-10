@@ -1,0 +1,92 @@
+.events {
+    > .carousel-container {
+        .content {
+            .carousel {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.event {
+    background-color: #1450d2;
+    position: relative;
+    height: 322px;
+    width: 100%;
+    max-width: 416px;
+    padding: 90px 25px 25px 25px;
+    box-sizing: border-box;
+    color: #FFF;
+    .date {
+        position: absolute;
+        top: -19px;
+        background-color: #001254;
+        height: 86px;
+        width: 100%;
+        max-width: 93px;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        span:first-child {
+            font-size: 16.25px;
+            font-family: InterstateLight;
+        }
+        span:last-child {
+            font-weight: bold;
+            font-size: 36px;
+        }
+        &::before {
+            content: '';
+            top: 0;
+            left: -20px;
+            position: absolute;
+            border: 10px solid #3b4e96;
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    p {
+        font-size: 15px;
+        margin-top: 7px;
+    }
+    button {
+        margin-top: 40px;
+    }
+    > span {
+        font-family: InterstateBold;
+        position: absolute;
+        bottom: 16px;
+        right: 20px;
+        z-index: 1;
+        color: black;
+        font-size: 24px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        height: 75px;
+        max-width: 100%;
+        left: 0;
+        bottom: 0;
+        background-image: url(../../img/event-gradient.png);
+    }
+    &::after {
+        content: '';
+        background-color: #e6e6e6;
+        position: absolute;
+        height: 56px;
+        width: 100%;
+        max-width: calc(100% - 25px);
+        -webkit-clip-path: polygon(20% 81%, 100% 80%, 100% 100%, 0% 100%);
+        clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+        bottom: 0;
+        right: -1px;
+    }
+}
