@@ -39,10 +39,12 @@
             display: flex;
             justify-content: space-between;
             transition: 0.3s;
+            left: 0;
             > * {
                 transition: 0.3s;
             }
             @include pc-to-tablet {
+                left: 30%;
                 > * {
                     &:not(.active) {
                         transform: scale(0.8);

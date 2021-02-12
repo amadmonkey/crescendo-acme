@@ -1,3 +1,5 @@
+@import '../../Mixins.scss';
+
 .insights {
     > h1 {
         font-size: 34px;
@@ -13,6 +15,9 @@
         width: 100%;
         max-width: 416px;
         box-shadow: 0 0 10px #a7a7a7;
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
         > div {
             margin: 11px 0;
             position: relative;
@@ -41,6 +46,13 @@
             font-size: 34px;
             font-weight: bold;
             margin-top: 13px;
+        }
+    }
+    @include tablet-down {
+        background-color: #051a7b;
+        color: #FFF;
+        .insight-item {
+            box-shadow: 0 0 10px #1d1d1d;
         }
     }
 }

@@ -12,27 +12,27 @@ const Events = () => {
             name: "Insight Exchange Network",
             description: "Join us for this conference showcasing innovation.",
             button: "Get More Insight",
-            location: "Chicago, IL"
+            location: <span><span className="bold">Chicago,</span> IL</span>
         },
         {
             date: { month: "JAN", date: "28" },
             name: "Insight Exchange Network",
             description: "Join us for this conference showcasing innovation.",
             button: "Get More Insight",
-            location: "The Wagner, New York"
+            location: <span><span className="bold">The Wagner,</span> New York</span>
         },
         {
             date: { month: "JAN", date: "28" },
             name: "Insight Exchange Network",
             description: "Join us for this conference showcasing innovation.",
             button: "Get More Insight",
-            location: "London, England"
+            location: <span><span className="bold">London,</span> England</span>
         }
     ]
 
     return (
         <div className="events">
-            <CarouselWrapper title="Upcoming Events" desc="This needs a great tagline, but I'll fill it in later">
+            <CarouselWrapper title={<h1 style={{ color: "#051a7b" }}>Upcoming <span className="bold">Events</span></h1>} desc="This needs a great tagline, but I'll fill it in later">
                 {data.map((obj, i) => {
                     return <Event key={i} data={obj} elemRef={el => refArray.current[i] = el} />
                 })}

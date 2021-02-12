@@ -3,7 +3,6 @@ import './style.scss';
 
 const Insight = (props) => {
     let p = props.data;
-    console.log(props.active);
     return (
         <div className={`insight-item ${props.active ? 'active' : ''}`} style={{ borderColor: p.color, color: p.color }} ref={props.elemRef}>
             <div>

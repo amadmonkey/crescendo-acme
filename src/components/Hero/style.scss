@@ -1,3 +1,4 @@
+@import '../../Mixins.scss';
 
 .hero {
     position: relative;
@@ -14,6 +15,9 @@
         background-repeat: no-repeat;
         background-position: top left;
         background-image: url(../../img/gradient.png);
+        @include pc-to-tablet {
+            top: -72px;
+        }
     }
     .banner {
         position: absolute;
@@ -43,5 +47,8 @@
                 padding-left: 2px;
             }
         }
+    }
+    @include pc-to-tablet {
+        padding-top: 96px;
     }
 }

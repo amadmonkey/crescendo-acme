@@ -29,7 +29,7 @@ const Insights = () => {
 
     return (
         <div className="insights">
-            <CarouselWrapper title="ACME Insights" desc="How are factors being used around the world?" refs={refArray}>
+            <CarouselWrapper title={<h1>ACME <span className="bold">Insights</span></h1>} desc="How are factors being used around the world?" refs={refArray}>
                 {data.map((obj, i) => {
                     return <Insight key={i} data={obj} elemRef={el => refArray.current[i] = el} />
                 })}
